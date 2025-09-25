@@ -1,68 +1,40 @@
-# CodeIgniter 4 Application Starter
+📇 Simple Contacts API (CodeIgniter 4)
 
-## What is CodeIgniter?
+A simple RESTful API built using CodeIgniter 4 and Query Builder for managing contacts.
+This project demonstrates basic CRUD operations (Create, Read, Update, Delete) without using inbuilt API response helpers — making it beginner-friendly and easy to understand.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+🚀 Features
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+List Contacts – Fetch all contacts
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+View Contact – Fetch a single contact by ID
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+Create Contact – Add a new contact (name, email, phone)
 
-## Installation & updates
+Update Contact – Modify an existing contact by ID
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+Delete Contact – Remove a contact by ID
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+JSON Responses for easy integration with frontend or mobile apps
 
-## Setup
+🛠️ Tech Stack
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+Framework: CodeIgniter 4
 
-## Important Change with index.php
+Database: MySQL (or MariaDB)
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+Language: PHP 8+
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+HTTP Format: REST + JSON
 
-**Please** read the user guide for a better explanation of how CI4 works!
+📂 Database Structure
 
-## Repository Management
+Table: contacts
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+<img width="1363" height="962" alt="Screenshot 2025-09-26 001256" src="https://github.com/user-attachments/assets/43dc16ab-33b3-434c-b792-724b97f3cf91" />
+<img width="1388" height="957" alt="Screenshot 2025-09-26 001316" src="https://github.com/user-attachments/assets/94166774-c26f-47c9-8a7d-3cd9a0119a1b" />
+<img width="1378" height="950" alt="Screenshot 2025-09-26 001328" src="https://github.com/user-attachments/assets/59817dcf-6078-4d55-a1cd-109d25531985" />
+<img width="1393" height="956" alt="Screenshot 2025-09-26 001341" src="https://github.com/user-attachments/assets/202f6839-a0a5-46d0-a4fd-4057b795cf7d" />
+<img width="1389" height="954" alt="Screenshot 2025-09-26 001352" src="https://github.com/user-attachments/assets/0038453f-10be-4b3f-89c1-b33c4bf34f53" />
 
-## Server Requirements
-
-PHP version 8.1 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
